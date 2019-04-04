@@ -24,6 +24,7 @@ namespace UILogin
 
             Button backButton = FindViewById<Button>(Resource.Id.GoListButton);
             Button viewPagerButton = FindViewById<Button>(Resource.Id.GoViewPager);
+          Button bottomNavigationButton = FindViewById<Button>(Resource.Id.GoBottomNavigation);
 
             backButton.Click += (sender, e) =>
             {
@@ -34,6 +35,12 @@ namespace UILogin
             viewPagerButton.Click+= (sender, e) =>
             {
                 Intent intent = new Intent(this, typeof(ViewPagerActivity));
+                StartActivity(intent);
+            };
+
+            bottomNavigationButton.Click += (sender, e) =>
+            {
+                Intent intent = new Intent(this,typeof(BottomNavigationActivity));
                 StartActivity(intent);
             };
         }

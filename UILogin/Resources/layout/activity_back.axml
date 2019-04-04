@@ -25,4 +25,13 @@
 		android:textColor="#43B095"
 		android:id="@+id/GoViewPager"/>
 
+	<Button
+		android:text="GO TO BOTTOM NAVIGATION"
+		android:layout_width="match_parent"
+		android:layout_height="3dp"
+		android:layout_margin="10dp"
+		android:layout_weight="1"
+		android:textColor="#43B095"
+		android:id="@+id/GoBottomNavigation" />
+
 </LinearLayout>

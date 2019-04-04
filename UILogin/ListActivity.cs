@@ -39,14 +39,14 @@ namespace UILogin
 
             mListView.Adapter = adapter;
 
-            signOutButton = FindViewById<Button>(Resource.Id.SignOutButton);
-
-            signOutButton.Click += SignOutButton_Click;
-
-            mListView.ItemClick += delegate(object sender, AdapterView.ItemClickEventArgs args)
-                {
-                    Toast.MakeText(Application, ((TextView) args.View).Text, ToastLength.Short).Show();
-                };
+//            signOutButton = FindViewById<Button>(Resource.Id.SignOutButton);
+//
+//            signOutButton.Click += SignOutButton_Click;
+//
+//            mListView.ItemClick += delegate(object sender, AdapterView.ItemClickEventArgs args)
+//                {
+//                    Toast.MakeText(Application, ((TextView) args.View).Text, ToastLength.Short).Show();
+//                };
         }
 
         private void SignOutButton_Click(object sender, EventArgs e)

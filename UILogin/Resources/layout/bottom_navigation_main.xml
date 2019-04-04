@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+  <item
+    android:id="@+id/menu_aayush"
+    android:enabled="true"
+    android:icon="@mipmap/ic_action_aayush"
+    android:title="AAYUSH"
+    app:showAsAction="ifRoom" />
+
+  <item
+    android:id="@+id/menu_aditya"
+    android:enabled="true"
+    android:icon="@mipmap/ic_action_aditya"
+    android:title="ADITYA"
+    app:showAsAction="ifRoom" />
+
+  <item
+    android:id="@+id/menu_arjun"
+    android:enabled="true"
+    android:icon="@mipmap/ic_action_arjun"
+    android:title="ARJUN"
+    app:showAsAction="ifRoom" />
+
+  <item
+    android:id="@+id/menu_nishank"
+    android:enabled="true"
+    android:icon="@mipmap/ic_action_nishank"
+    android:title="NISHANK"
+    app:showAsAction="ifRoom" />
+
+  <item
+    android:id="@+id/menu_priyanshi"
+    android:enabled="true"
+    android:icon="@mipmap/ic_action_priyanshi"
+    android:title="PRIYANSHI"
+    app:showAsAction="ifRoom" />
+
+</menu>
