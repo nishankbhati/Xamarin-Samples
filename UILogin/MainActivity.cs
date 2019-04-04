@@ -46,7 +46,6 @@ namespace UILogin
 
         private void LoginButton_Click(object sender, System.EventArgs e)
         {
-            //throw new System.NotImplementedException();
             var intent = new Intent(this,typeof(BackActivity));
             StartActivity(intent);
         }
