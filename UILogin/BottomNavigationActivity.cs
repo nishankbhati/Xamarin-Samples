@@ -23,12 +23,6 @@ namespace UILogin
             // Create your application here
             SetContentView(Resource.Layout.activity_bottomNavigation);
 
-//            bottomNavigationView = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
-//
-//            if (toollbar != null)
-//            {
-//                SetSupportAction(toollbar);
-//            }
         }
     }
 }
