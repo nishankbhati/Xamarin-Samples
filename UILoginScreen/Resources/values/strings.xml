@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">UILoginScreen</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="teams">
+      <item>India</item>
+      <item>South Africa</item>
+      <item>Australia</item>
+      <item>England</item>
+      <item>New Zealand</item>
+      <item>Sri Lanka</item>
+      <item>Pakistan</item>
+      <item>West Indies</item>
+      <item>Bangladesh</item>
+      <item>Ireland</item>
+    </string-array>
+</resources>
