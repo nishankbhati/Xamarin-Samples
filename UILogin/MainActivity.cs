@@ -16,12 +16,9 @@ namespace UILogin
             base.OnCreate(savedInstanceState);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
-//            ImageView logoImageView = FindViewById<ImageView>(Resource.Id.Logoimageview);
-//            logoImageView.SetImageResource(Resource.Mipmap.starbucks);
 
             Button loginButton = FindViewById<Button>(Resource.Id.LoginButton);
             
-
             loginButton.Click += LoginButton_Click;
         }
 
