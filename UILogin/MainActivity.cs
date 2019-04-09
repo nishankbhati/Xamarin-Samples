@@ -1,10 +1,12 @@
-﻿using Android.App;
+﻿using System;
+using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Support.V7.App;
 using Android.Runtime;
 using Android.Util;
 using Android.Widget;
+using InternPortalCore;
 
 namespace UILogin
 {
@@ -14,6 +16,9 @@ namespace UILogin
         private EditText emailEditText;
         private EditText passwordEditText;
         private Button loginButton;
+        private string email;
+        private string password;
+        private ValidateEmailandPassword validateEmailandPassword;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -24,10 +29,14 @@ namespace UILogin
             loginButton = FindViewById<Button>(Resource.Id.LoginButton);
             emailEditText = FindViewById<EditText>(Resource.Id.EmailInput);
             passwordEditText = FindViewById<EditText>(Resource.Id.PasswordInput);
+
+            email = emailEditText.Text.ToString();
+            password = passwordEditText.Text.ToString();
+
+            validateEmailandPassword= new ValidateEmailandPassword();
             
             loginButton.Click += LoginButton_Click;
         }
-
 
         protected override void OnResume()
         {
@@ -48,29 +57,30 @@ namespace UILogin
             Log.Info("OnDestroy","On Destroy from main activity");
         }
 
-        protected bool validateEmail()
+        private void LoginButton_Click(object sender, EventArgs e)
         {
-           bool validEmail = true;
-           string email = emailEditText.Text.ToString();
 
-           Log.Info("Validate email", email);
-           return validEmail;
-        }
+            Log.Info("email", email);
+            Log.Info("password", password);
+            Console.WriteLine(email + " *Email&Password* " + password);
 
-        protected bool validatePassword()
-        {
-            string password = passwordEditText.Text.ToString();
-
-            return (password.Length > 6);
-        }
-
-        private void LoginButton_Click(object sender, System.EventArgs e)
-        {
-            if (validateEmail() && validatePassword())
+            if (validateEmailandPassword.validatePassword(password) && validateEmailandPassword.validateEmail(email))
             {
                 var intent = new Intent(this, typeof(BackActivity));
                 StartActivity(intent);
             }
+
+           else
+           {
+               if (!validateEmailandPassword.validateEmail(email))
+               {
+                   Log.Info("INVALID"," --email");
+               }
+               else
+               {
+                   Log.Info("INVALID", " --password");
+               }
+           }
         }
 
     }
