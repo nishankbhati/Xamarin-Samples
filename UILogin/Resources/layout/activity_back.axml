@@ -34,4 +34,13 @@
 		android:textColor="#43B095"
 		android:id="@+id/GoBottomNavigation" />
 
+	<Button
+		android:text="GO TO GOOGLE MAPS"
+		android:layout_width="match_parent"
+		android:layout_height="3dp"
+		android:layout_margin="10dp"
+		android:layout_weight="1"
+		android:textColor="#43B095"
+		android:id="@+id/GoGoogleMaps" />
+
 </LinearLayout>
