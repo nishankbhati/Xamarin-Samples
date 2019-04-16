@@ -16,8 +16,8 @@ namespace UILogin
         private EditText emailEditText;
         private EditText passwordEditText;
         private Button loginButton;
-        private string email;
-        private string password;
+        public string email;
+        public string password;
         private ValidateEmailandPassword validateEmailandPassword;
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -30,8 +30,6 @@ namespace UILogin
             emailEditText = FindViewById<EditText>(Resource.Id.EmailInput);
             passwordEditText = FindViewById<EditText>(Resource.Id.PasswordInput);
 
-            email = emailEditText.Text.ToString();
-            password = passwordEditText.Text.ToString();
 
             validateEmailandPassword= new ValidateEmailandPassword();
             
@@ -59,6 +57,9 @@ namespace UILogin
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
+
+            email = emailEditText.Text;
+            password = passwordEditText.Text;
 
             Log.Info("email", email);
             Log.Info("password", password);

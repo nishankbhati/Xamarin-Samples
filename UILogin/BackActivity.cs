@@ -24,32 +24,39 @@ namespace UILogin
 
             Button backButton = FindViewById<Button>(Resource.Id.GoListButton);
             Button viewPagerButton = FindViewById<Button>(Resource.Id.GoViewPager);
-          Button bottomNavigationButton = FindViewById<Button>(Resource.Id.GoBottomNavigation);
+            Button bottomNavigationButton = FindViewById<Button>(Resource.Id.GoBottomNavigation);
+            Button googleMapButton = FindViewById<Button>(Resource.Id.GoGoogleMaps);
 
             backButton.Click += (sender, e) =>
             {
-                Intent intent = new Intent(this,typeof(ListActivity));
+                Intent intent = new Intent(this, typeof(ListActivity));
                 StartActivity(intent);
             };
 
-            viewPagerButton.Click+= (sender, e) =>
-            {
-                Intent intent = new Intent(this, typeof(ViewPagerActivity));
-                StartActivity(intent);
-            };
+            viewPagerButton.Click += (sender, e) =>
+             {
+                 Intent intent = new Intent(this, typeof(ViewPagerActivity));
+                 StartActivity(intent);
+             };
 
             bottomNavigationButton.Click += (sender, e) =>
             {
-                Intent intent = new Intent(this,typeof(BottomNavigationActivity));
+                Intent intent = new Intent(this, typeof(BottomNavigationActivity));
+                StartActivity(intent);
+            };
+
+            googleMapButton.Click += (sender, e) =>
+            {
+                Intent intent = new Intent(this,typeof(MapActivity));
                 StartActivity(intent);
             };
         }
 
-//        private void BackButton_Click(object sender, EventArgs e)
-//        {
-//            //throw new NotImplementedException();
-//            Intent intent = new Intent(this,typeof(MainActivity));
-//            StartActivity(intent);
-//        }
+        //        private void BackButton_Click(object sender, EventArgs e)
+        //        {
+        //            //throw new NotImplementedException();
+        //            Intent intent = new Intent(this,typeof(MainActivity));
+        //            StartActivity(intent);
+        //        }
     }
 }
