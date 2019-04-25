@@ -30,7 +30,6 @@ namespace UILogin
             emailEditText = FindViewById<EditText>(Resource.Id.EmailInput);
             passwordEditText = FindViewById<EditText>(Resource.Id.PasswordInput);
 
-
             validateEmailandPassword= new ValidateEmailandPassword();
             
             loginButton.Click += LoginButton_Click;
